@@ -51,9 +51,6 @@ p {margin:0 0 1.5em 0;}
 a {color:#fff; text-decoration:none;}
 a:hover {color: #fff; text-decoration:none;}
 
-.button {display:inline-block; padding:5px; border:1px solid #fff; color:#fff; text-transform: uppercase;} 
-.button:hover {background:#eee;}
-
 ul {margin-top:0; padding-left:16px; margin-bottom:1.5em;}
 ul li {margin-bottom:5px;}
 
@@ -86,6 +83,56 @@ i.icon {
   height:15px;
 }
 
+.rich-text-container {padding-bottom:1.5em;}
+
+/* Forms
+------------------------------------------------------------------*/
+ul.form, ul.form li {margin:0; padding:0; list-style: none;}
+ul.form li {margin-bottom:8px;}
+
+label {display: inline-block; font-weight:bold; margin-right:10px; margin-bottom: 3px; vertical-align: middle;}
+select, input, textarea {border:1px solid #8fcdcb; padding:1%; vertical-align: middle;}
+
+ul.form li.buttons {text-align: right;}
+
+.button { padding:5px; } 
+.button:hover {background:#eee;}
+
+.button {
+    display:inline-block;
+    font:normal 16px/1em "Oswald", Arial, Helvetica, sans-serif; 
+    text-transform: uppercase;
+    border:1px solid #fff; 
+    color:#fff; 
+    padding:8px 12px;
+}
+
+.button-small {
+    display:inline-block;
+    font:normal 12px/1em "Oswald", Arial, Helvetica, sans-serif; 
+    text-transform: uppercase;
+    border:1px solid #fff; 
+    color:#fff; 
+    padding:5px 6px;
+    letter-spacing: .5px; 
+}
+
+.submit-button {
+    border:1px solid #292929; 
+    background:#8fcdcb; 
+    color:#292929;
+}
+
+.secondary-button {
+    border:1px solid #999; 
+    background:#bbb; 
+    color:#fff;
+}
+
+form .errors li {
+    color:#c00 !important;
+}
+
 
 /* Layout
 ------------------------------------------------------------------*/
@@ -104,14 +151,16 @@ i.icon {
     width:25%; 
     height: 100%;
     padding:175px 0 30px;
-    background:url("../images/sidebar-background.gif");
+    background:url('{{ "sidebar-background.gif" | asset_url }}');
 }
 #sidebar .inner {width:80%; margin:0 auto;}
+
 
 /*Header
 ------------------------------------------------------------------*/
 #header {text-align:center; margin-bottom:55px;}
 #header h1 {margin-bottom:0;}
+
 
 /*Main nav
 ------------------------------------------------------------------*/
@@ -127,13 +176,17 @@ i.icon {
 } 
 
 #main-nav .menu li {margin-bottom:9px;}
+
 #main-nav .menu li.active {background-color: #8fcdcb;}
-#main-nav .menu li.active a{color:#292929;}
+#main-nav .menu li.active a{color:#333;}
+
 
 /*Utility Menu
 ------------------------------------------------------------------*/
 #utility-nav {text-align: center;}
-#utility-nav .shopping-cart-summary h3{font-size:11px; letter-spacing:4px; color:#f49ecc;}
+#utility-nav .shopping-cart-summary h3 a {font-size:11px; letter-spacing:4px; color:#f49ecc;}
+
+
 /* Feature Slider
 ------------------------------------------------------------------*/
 .slider-container {overflow: hidden;}
@@ -152,6 +205,7 @@ i.icon {
 .slider-container .slide .callout h2 {font-size: 15px; color:#292929;}
 .slider-container .slide .callout p {color:#292929;}
 
+
 /* Callouts
 ------------------------------------------------------------------*/
 .callout-container {overflow: hidden;}
@@ -159,14 +213,20 @@ i.icon {
 .callout-container .callout .info {position:absolute; z-index:10; width:50%; padding:5% 0 5% 5%;}
 .callout-container .callout .info h3 {margin-bottom:28px;}
 
+
 /* Content Header 
 ------------------------------------------------------------------*/
-.content-header {background:#fff; padding-bottom:35px;}
+.content-header {background:#fff; position:relative;}
+.content-header .page-title {position:absolute; z-index:10; left:20%; bottom:20%; }
 
 /* Content Section 
 ------------------------------------------------------------------*/
-.content-section {background:#fff; overflow: hidden;}
-.content-section h1, h2, h3, h4, p, div, li {color:#292929;}
+.content-section {background:#fff; overflow: hidden; padding:35px 0 50px;}
+.content-section .inner {width:90%; margin:0 auto; position:relative;}
+
+.content-section h1, .content-section h2, .content-section h3, .content-section h4, .content-section p, .content-section div, .content-section li {color:#292929;}
+.content-section a {color:#8fcdcb; text-decoration:underline;}
+.content-section a:hover {color:#292929;}
 
 
 /* image-gallery
@@ -176,10 +236,75 @@ i.icon {
 
 .image-gallery .thumbnails li {display:inline-block; margin-right:5px; width:50px; }
 
+
 /* Product Details
 ------------------------------------------------------------------*/
-.product-details { padding-bottom:30px;}
-.product-details .inner {width:90%; margin:0 auto; position:relative;}
-
 .product-details .image-gallery {width:45%; margin-right:5%; float:left; position:relative;}
 .product-details .product-info {width:45%; float:left; position:relative;}
+
+.product-details .product-info h1 {font:bold 16px/1em "Nunito", Arial, Helvetica, sans-serif; margin:0 0 8px 0; }
+.product-details .product-info h2 {font:normal 14px/1em "Nunito", Arial, Helvetica, sans-serif; margin:0 0 8px 0; }
+.product-details .product-info h3 {font:normal 16px/1em "Oswald", Arial, Helvetica, sans-serif; margin:18px 0 8px; text-transform:uppercase}
+.product-details .product-info p {margin-bottom:12px; font-size:13px; line-height:18px;}
+
+
+/* Product Options/Add to Cart
+------------------------------------------------------------------*/
+.product-options {margin-bottom:18px;}
+.product-options .selector-wrapper {margin-bottom:8px;}
+
+.add-to-cart .add-to-cart-button {
+    font:normal 12px/1em "Oswald", Arial, Helvetica, sans-serif; 
+    border:1px solid #292929; 
+    background:#f49ecc; 
+    color:#292929;
+    padding:8px 12px;
+}
+
+/*Cart Page
+------------------------------------------------------------------*/
+.cart-page {padding-top:14px;}
+.cart-page .continue-shopping {margin-bottom:8px;}
+
+.cart-page .product-items { margin-bottom: 24px; }
+
+.cart-page .product-item {
+    overflow: hidden; 
+    position:relative; 
+    border-bottom:1px solid #eee;
+    padding:12px 0;
+}
+
+.cart-page .product-item .product-item-section {display:inline; float:left; width:25%;}
+.cart-page .product-item .product-item-section .inner {width:90%; margin:0 auto;}
+
+.cart-page .product-item .product-image {width:19%; margin-right:1%;}
+.cart-page .product-item .product-image img {width:100%;}
+
+.cart-page .product-item .product-info {width:33%;}
+.cart-page .product-item .product-info h3 {
+    font:bold 15px/1.231em "Nunito", Arial, Helvetica, sans-serif; 
+    margin:0 0 4px 0; 
+    text-transform: none;
+}
+
+.cart-page .product-item .product-info p {margin-bottom:4px;}
+
+.cart-page .product-item .product-qty {width:25%;}
+.cart-page .product-item .product-qty label {margin-right:4px;}
+.cart-page .product-item .product-qty input.qty {padding:3px; width:35px;}
+.cart-page .product-item .product-total { width:20%; font-size:14px; text-align: right;}
+
+.cart-page .cart-notes {margin-bottom:24px;}
+
+.cart-page .cart-summary {margin-bottom:24px;}
+.cart-page .cart-summary .alert {background:#eee; padding:10px; font-style: italic;}
+.cart-page .cart-summary .subtotal {font-size:16px;}
+
+
+/*Contact Form
+------------------------------------------------------------------*/
+.contact-form {width:45%;}
+.contact-form label {display:inline-block; width:25%; margin-right:2%; vertical-align: top;}
+.contact-form input, .contact-form select, .contact-form textarea {width:69%;} 
+.contact-form input.button {width:auto;}
