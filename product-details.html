@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Serpentijn Art &amp; Athletics</title>
+    <meta name="description" content="Serpentijn Art &amp; Athletics">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    
+</head>
+<body id="body">
+
+    <div class="wrapper">
+    
+        <aside id="sidebar"> 
+            <header id="header" class="container">
+                <div class="inner">
+                    <h1><a href="/"><img src="images/logo.png" alt="Serpentijn Art &amp; Athletics"/></a></h1>
+                </div><!-- inner -->
+            </header><!-- header -->
+                
+            <nav id="main-nav" class="container">
+                <div class="inner">
+                    <ul class="menu">
+                        <li><a href="products.html">Shop Products</a></li>
+                        <li><a href="about.html">About Serpentijn</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div><!-- inner-->
+            </nav><!-- main-nav-->
+
+            <div id="utility-nav" class="container">
+                <div class="inner">
+                    <div class="shopping-cart-summary">
+                        <h3><i class="icon"><img src="images/icons/shopping-cart-icon.png" /></i><span class="icon-text">Basket: <span id="shopping-cart-count">2</span> items</span></h3>
+                    </div><!-- shopping-cart-summary -->
+                </div><!-- inner -->
+            </div><!-- utility-nav-->
+        </aside> <!-- aside-->
+        
+        <div id="main" class="container">
+            <div class="inner">
+                <div itemscope itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+                    <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+                    <header class="content-header">
+                        <img class="background-image" src="http://placehold.it/800x218">
+                    </header>
+                    
+                    <section class="product-details content-section">
+                        <div class="inner">
+                            <div class="image-gallery">
+                                <div class="feature-image">
+                                    <img src="/images/callout-images/mke-bike-team.jpg" />
+                                </div>
+                                <ul class="thumbnails">
+                                    <li><a href="#"><img src="/images/callout-images/mke-bike-team.jpg" /></a></li>
+                                    <li><a href="#"><img src="/images/callout-images/mke-bike-team.jpg" /></a></li>
+                                    <li><a href="#"><img src="/images/callout-images/mke-bike-team.jpg" /></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="product-info">
+                                <h1 itemprop="name">Serpentijn Cyclocross T-shirt</h1>
+                                <h2 class="price">$30.00</h2>
+                                <div class="description">
+                                    <p>Designed to celebrate taking the path less ridden. Illustrated by artist Keith Negley, printed with care by Ink Designs. On USA-Made, super-soft, ring spun 100% cotton. Tag-less for comfort, side-seamed to keep its shape. Take the path with you–even when you’re not riding.</p>
+                                </div>
+                                
+                                <div class="options">
+                                
+                                </div>
+
+                            </div>
+                        </div><!--inner -->
+                    </section><!--product-details-->
+
+                </div><!-- itemscope thing-->
+            </div><!-- inner -->        
+        </div><!-- main-->
+        
+    </div><!-- wrapper--> 
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    </body>
+</html>
