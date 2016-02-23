@@ -229,6 +229,8 @@ form .errors li {
 
 #sidebar .inner {width:80%; margin:0 auto;}
 
+#mobile-menu-button {display:none;}
+
 /* Grid
 ------------------------------------------------------------------*/
 .grid {position:relative; overflow: hidden; margin-bottom:35px;}
@@ -241,7 +243,6 @@ form .errors li {
 .grid .col .copy-block {margin-bottom:50px;}
 .grid .col .copy-block h2 {font-size: 18px; line-height: 1.231em; margin-bottom:6px;}
 .grid .col .copy-block h3 {font-size: 14px; line-height: 1.231em; margin-bottom:6px;}
-.grid .col .copy-block h4 {font-size: 12px; line-height: 1.231em; margin-bottom:6px;}
 .grid .col .feature-copy p {font-size:13px; line-height:22px;}
 .grid .col .feature-copy p.small-text {font-size:11px;}
 .grid .col .feature-copy p.regular-text {font-size:12px; line-height:18px;}
@@ -379,7 +380,7 @@ form .errors li {
 .callout-container .callout.hover .background-image {
     opacity: .75;
 }
-.callout-container .callout.hover .button {background:rgba(0, 0, 0, 0.50);}
+.callout-container .callout.hover .button {background:rgba(0, 0, 0, 0.35);}
 
 /* Content Header 
 ------------------------------------------------------------------*/
@@ -554,17 +555,72 @@ form .errors li {
         background:#111;
     }
 
-    #sidebar .inner {width:80%; margin:0 auto;}
+    #sidebar .inner {width:100%; margin:0 auto;}
     
-    #main {
-        padding-left:0;
+    #mobile-menu-button {
+        display: block;
+        position: relative;
+        padding-left: 1.25em;
+        width: 40px;
+        float: left;
+        font-size: 40px;
+        height: 50px;
+        left: 8px;
     }
 
-    #main-nav {display: none;}
-    #utility-nav {display:none;}
+    #mobile-menu-button:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      width: 40px;
+      height: 0.15em;
+      background: white;
+      box-shadow: 
+        0 0.25em 0 0 white,
+        0 0.5em 0 0 white;
+    }
+
+
+    #main-nav {background: rgba(0,0,0,0.50); margin-bottom:0;display:none;}
+    
+    #main-nav .menu {font-size: 13px;}
+    #main-nav hr {display:none;}
+    #main-nav .menu li {margin-bottom:0;}
+    #main-nav .menu li a { padding: 14px 4px 9px;}
+
+
+    #utility-nav {    
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 13px;
+        right: 5px;
+        width: 142px;
+    }
+
+    #utility-nav .shopping-cart-summary a {
+        font: normal 10px/18px "Nunito", Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+    }
+
+    #footer-nav {
+        display:none;
+        position: relative;
+        bottom: auto;
+        background: rgba(0,0,0,0.50);
+        padding:27px 0;
+    }
+
 
     #header{    
-        width: 90px;
+        width: 60px;
+        height: 50px;
         margin: 0 auto;
     }
+
+
+
+    #main { padding-left:0;}
+
+
 }
