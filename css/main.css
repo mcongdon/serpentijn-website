@@ -370,8 +370,15 @@ form .errors li {
     letter-spacing: 1px;
 }
 
-.callout-container .callout.hover {}
-.callout-container .callout.hover .background-image {opacity: .75;}
+.callout-container .callout .background-image {
+        -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    opacity:1;
+}
+.callout-container .callout.hover .background-image {
+    opacity: .75;
+}
 .callout-container .callout.hover .button {background:rgba(0, 0, 0, 0.50);}
 
 /* Content Header 
