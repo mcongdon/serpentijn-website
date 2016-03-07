@@ -253,6 +253,78 @@ form .errors li {
 
 .content-section #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {border:1px solid #c00; }
 
+
+/* Icons
+------------------------------------------------------------------*/
+@font-face {
+  font-family: 'icons';
+  src: url('{{ "icons.eot" | asset_url }}');
+  src: url('{{ "icons.eot" | asset_url }}#iefix') format("embedded-opentype"),
+       url('{{ "icons.woff" | asset_url }}') format("woff"),
+       url('{{ "icons.ttf" | asset_url }}') format("truetype"),
+       url('{{ "icons.svg" | asset_url }}#timber-icons') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$socialIconFontStack: 'icons';
+
+.supports-fontface .icon:before {
+  display: inline;
+  font-family: $socialIconFontStack;
+  speak: none; // future fallback, limited in effect currently
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*================ Icon mapping ================*/
+.icon-american_express:before { content: "\41"; }
+.icon-arrow-down:before { content: "\e604"; }
+.icon-arrow-left:before { content: "\e603"; }
+.icon-arrow-right:before { content: "\e602"; }
+.icon-arrow-up:before { content: "\e605"; }
+.icon-bitcoin:before { content: "\42"; }
+.icon-cart:before { content: "\e600"; }
+.icon-cirrus:before { content: "\43"; }
+.icon-comment:before { content: "\e60a"; }
+.icon-cross2:before { content: "\e60c"; }
+.icon-cross:before { content: "\e60d"; }
+.icon-diners_club:before { content: "\63"; }
+.icon-discover:before { content: "\44"; }
+.icon-dankort:before { content: "\64"; }
+.icon-facebook:before { content: "\66"; }
+.icon-fancy:before { content: "\46"; }
+.icon-google:before { content: "\67"; }
+.icon-google_wallet:before { content: "\47"; }
+.icon-instagram:before { content: "\69"; }
+.icon-interac:before { content: "\49"; }
+.icon-jcb:before { content: "\4a"; }
+.icon-list:before { content: "\e601"; }
+.icon-maestro:before { content: "\6d"; }
+.icon-master:before { content: "\4d"; }
+.icon-minus:before { content: "\e608"; }
+.icon-paypal:before { content: "\50"; }
+.icon-pinterest:before { content: "\70"; }
+.icon-plus:before { content: "\e609"; }
+.icon-rss:before { content: "\e607"; }
+.icon-search:before { content: "\e606"; }
+.icon-stripe:before { content: "\53"; }
+.icon-tag:before { content: "\e60b"; }
+.icon-tumblr:before { content: "\74"; }
+.icon-twitter:before { content: "\54"; }
+.icon-vimeo:before { content: "\76"; }
+.icon-visa:before { content: "\56"; }
+.icon-youtube:before { content: "\79"; }
+
+.content-section .social-sharing {margin-bottom:19px;}
+.content-section .social-sharing a {color:#292929; text-decoration: none; margin-right:10px;}
+.content-section .social-sharing a:hover {color:#666;}
+
 /* Modal
 ------------------------------------------------------------------*/
 .modal {
@@ -325,7 +397,7 @@ form .errors li {
     width: 280px; 
     height: 100%;
     padding:175px 0 30px;
-    background:url('{{ "sidebar-background.gif" | asset_url }}');
+    background:#292929 url('{{ "sidebar-background.png" | asset_url }}');
     /*background:url('../images/sidebar-background.gif');*/
 
     z-index: 500; 
