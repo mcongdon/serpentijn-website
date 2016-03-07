@@ -99,33 +99,38 @@ i.icon {
 
 .rich-text-container {padding-bottom:1.5em;}
 
-#mc_embed_signup form {padding:0 !important;}
+
 
 /* Forms
 ------------------------------------------------------------------*/
 ul.form, ul.form li {margin:0; padding:0; list-style: none;}
 ul.form li {margin-bottom:8px;}
 
+ul.form li label {min-width: 100px;}
+
 label {display: inline-block; font-weight:bold; margin-right:10px; margin-bottom: 3px; vertical-align: middle;}
 select, input, textarea {border:1px solid #8fcdcb; padding:1%; vertical-align: middle;}
 
 ul.form li.buttons {text-align: right;}
+
+.address-form {margin-bottom:30px;}
 
 .button { padding:5px; } 
 .button:hover {background:rgba(0, 0, 0, 0.50);}
 
 .button {
     display:inline-block;
-    font:normal 18px/1em "Oswald", Arial, Helvetica, sans-serif; 
+    font:normal 16px/1em "Oswald", Arial, Helvetica, sans-serif; 
     text-transform: uppercase;
     border:1px solid #fff; 
     color:#fff; 
     padding:12px;
+    transition: all 0.1s ease-in-out 0s;
 }
 
 .button-small {
     display:inline-block;
-    font:normal 12px/1em "Oswald", Arial, Helvetica, sans-serif; 
+    font:normal 10px/1em "Oswald", Arial, Helvetica, sans-serif; 
     text-transform: uppercase;
     border:1px solid #fff; 
     color:#fff; 
@@ -145,9 +150,97 @@ ul.form li.buttons {text-align: right;}
     color:#fff;
 }
 
+.content-section .add-new-address-button {margin-bottom:24px; }
+.content-section .button{
+    color:#292929; 
+    text-decoration:none;
+    font-size:14px;
+}
+
+.content-section .submit-button {
+    border:1px solid #292929; 
+    background:#8fcdcb; 
+    color:#292929;
+}
+
+.content-section .secondary-button {
+    border:1px solid #292929; 
+    background:#bbb; 
+    color:#292929;
+}
+
+.content-section .button-small {
+    font-size:10px;
+}
+
+.content-section .button:hover{background:rgba(0, 0, 0, 0.50);}
+
+
 form .errors li {
     color:#c00 !important;
 }
+
+
+/*Contact Form
+------------------------------------------------------------------*/
+.contact-form ul.form li {margin-bottom:12px; }
+.contact-form ul.form li.buttons {text-align: left; padding-top:8px;}
+
+.contact-form label {    
+    color:#292929;
+    display:block; 
+    font:normal 9px/1em "Nunito", Arial, Helvetica, sans-serif;
+    text-transform: uppercase; 
+    margin:0 0 4px;
+    letter-spacing: 1.5px;
+}
+.contact-form input, .contact-form select, .contact-form textarea {width:74%; line-height: 1.5em;} 
+.contact-form input.button {width:75px; line-height: 1em;}
+
+
+/* Mail Chimp forms
+------------------------------------------------------------------*/
+.content-section #mc_embed_signup {}
+.content-section #mc_embed_signup form {padding:0 !important;}
+
+.content-section #mc_embed_signup label {    
+    color:#292929;
+    display:block; 
+    font:normal 9px/1em "Nunito", Arial, Helvetica, sans-serif;
+    text-transform: uppercase; 
+    margin:0 0 4px;
+    letter-spacing: 1.5px;
+}
+
+.content-section #mc_embed_signup input {
+    line-height: 1.5em;
+    border: 1px solid #8fcdcb;
+    padding: 1%;
+    vertical-align: middle;
+    border-radius: 0;
+}
+
+.content-section #mc_embed_signup .button {
+    display:inline-block;
+    font:normal 14px/1em "Oswald", Arial, Helvetica, sans-serif; 
+    text-transform: uppercase;
+    padding:12px;
+    border:1px solid #292929; 
+    background:#8fcdcb; 
+    color:#292929;
+    height:auto;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.content-section #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    margin:0; 
+    padding:5px 0; 
+    font-size:11px; 
+    font-style: italic;
+    color:#c00;
+}
+
+.content-section #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {border:1px solid #c00; }
 
 /* Modal
 ------------------------------------------------------------------*/
@@ -251,9 +344,25 @@ form .errors li {
 
 .grid .col .highlight p {color:#8fcdcb;}
 .grid.grid-2cols .col {width:50%;}
+.grid.grid-1cols .col {display: block; float:none;}
 
 
+.copy-block table {}
+.copy-block table tr td,
+.copy-block table tr th  {padding: 5px 10px;}
+.copy-block table tr th:first-child {text-align: left;}
+.copy-block table tbody tr:nth-child(odd)  td {background:#eee;}
+.copy-block table tfoot tr td {font-size:12px; border-top:1px solid #ccc;}
+.copy-block table tfoot tr td strong {font-size:14px;}
 
+.copy-block .note {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 10px; 
+}    
+
+.copy-block .address-details {margin-bottom:5px;}
+.copy-block .address-buttons {margin-bottom:25px;}
 /*Header
 ------------------------------------------------------------------*/
 #header {text-align:center; margin-bottom:55px;}
@@ -291,9 +400,18 @@ form .errors li {
 
 /*Utility Menu
 ------------------------------------------------------------------*/
-#utility-nav {text-align: center;}
+#utility-nav {text-align: center; margin-bottom:40px;}
 #utility-nav .shopping-cart-summary a {font: normal 11px/18px "Nunito", Arial, Helvetica, sans-serif; letter-spacing:4px; text-transform: uppercase;}
 #utility-nav .shopping-cart-summary .icon {vertical-align:text-bottom;}
+
+/*Account Menu
+------------------------------------------------------------------*/
+#account-nav {text-align: center; margin-bottom:40px;}
+
+#account-nav a {font: normal 8px/18px "Nunito", Arial, Helvetica, sans-serif; letter-spacing:2px; text-transform: uppercase;}
+#account-nav a:hover {text-decoration: underline;}
+#account-nav a.active {color:#8fcdcb;}
+
 
 /*footer-nav
 ------------------------------------------------------------------*/
@@ -448,7 +566,7 @@ form .errors li {
 .product-options input {height:22px;}
 
 .add-to-cart .add-to-cart-button {
-    font:normal 18px/1em "Oswald", Arial, Helvetica, sans-serif;  
+    font:normal 16px/1em "Oswald", Arial, Helvetica, sans-serif;  
     border:1px solid #292929; 
     background:#f49ecc; 
     color:#292929;
@@ -525,21 +643,6 @@ form .errors li {
 ------------------------------------------------------------------*/
 .contact-us-page .grid .col .copy-block {margin-bottom:12px; width:80%;}
 
-/*Contact Form
-------------------------------------------------------------------*/
-.contact-form ul.form li {margin-bottom:12px; }
-.contact-form ul.form li.buttons {text-align: left; padding-top:8px;}
-
-.contact-form label {    
-    color:#292929;
-    display:block; 
-    font:normal 9px/1em "Nunito", Arial, Helvetica, sans-serif;
-    text-transform: uppercase; 
-    margin:0 0 4px;
-    letter-spacing: 1.5px;
-}
-.contact-form input, .contact-form select, .contact-form textarea {width:74%; line-height: 1.5em;} 
-.contact-form input.button {width:75px; line-height: 1em; background:#fff;}
 
 
 
